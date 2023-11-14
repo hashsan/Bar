@@ -16,10 +16,8 @@ export class Bar{
     if(i===0){
       return this.remove()
     }
-    if(i===100){
-      return bar.classList.add('full')
-    }
-    bar.classList.add('mip')
+    bar.style.width = i + '%'
+    bar.classList.add('trans')
   }
 
   ////
@@ -40,13 +38,14 @@ export class Bar{
   }
   isfull(){
     const bar = this.bar
-    return bar.classList.contains('full')
+    //console.log(!!parseInt(bar.style.width))
+    return !! (parseInt(bar.style.width) > 99);
   }
   remove(){
     //console.log('in???',this)
     const bar = this.bar    
-    bar.classList.remove('mip')    
-    bar.classList.remove('full')  
+    bar.classList.remove('trans')
+    bar.style.width = 0;
   }
   setStyle(){
     const cls ='barstyle'
@@ -64,14 +63,9 @@ export class Bar{
   width:0%;
   background:#f26;
 }
-.Bar.mip{
+.Bar.trans{
   transition:width 0.3s ease-in;  
-  width:20%;  
 }
-.Bar.full{
-  transition:width 0.3s ease-in;  
-  width:100%;
-}    
     `;
     document.body.append(el)
   }
@@ -79,7 +73,7 @@ export class Bar{
 
 /*
 var bar = new Bar('#bar','orange','8px')
-bar.go(10)
+bar.go(15)
 document.querySelector('button').onclick=()=>{
   bar.go(100)
 }
