@@ -1,6 +1,6 @@
 
 
-class Bar{
+export class Bar{
   bar;
   constructor(query,background,height){
     const parent = document.querySelector(query)
