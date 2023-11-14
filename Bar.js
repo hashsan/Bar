@@ -3,7 +3,7 @@
 export class Bar{
   bar;
   constructor(query,background,height){
-    const parent = document.querySelector(query)
+    let parent = document.querySelector(query)
     if(!parent){
       parent =document.body
     }
