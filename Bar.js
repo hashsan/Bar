@@ -22,7 +22,9 @@ export class Bar{
       return this.remove()
     }
     bar.classList.add('trans') //v4 first before the set "width"
-    bar.style.width = i + '%'    
+    setTimeout(()=>{ 
+        bar.style.width = i + '%'    
+    },5)
   }
   //v2
   getValue=()=>{
