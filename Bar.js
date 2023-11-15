@@ -1,4 +1,7 @@
-
+/*
+v1 created
+v2 getValue
+*/
 
 export class Bar{
   bar;
@@ -19,6 +22,11 @@ export class Bar{
     bar.style.width = i + '%'
     bar.classList.add('trans')
   }
+  //v2
+  getValue=()=>{
+    return parseInt(this.bar.style.width)
+  }  
+  
 
   ////
   makedom(background,height){
