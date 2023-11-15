@@ -1,6 +1,7 @@
 /*
 v1 created
 v2 getValue
+v3 NaN issue first touch
 */
 
 export class Bar{
@@ -35,6 +36,8 @@ export class Bar{
     bar.classList.add('Bar')
     bar.style.background = background||'#f26'
     bar.style.height = height||'4px'
+    //
+    bar.style.width = 0; //v3    
     //----
     bar.ontransitionend=()=>{
       //console.log('in?')
