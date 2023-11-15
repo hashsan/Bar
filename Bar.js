@@ -2,6 +2,7 @@
 v1 created
 v2 getValue
 v3 NaN issue first touch
+v4 repair the transtionend dont work 
 */
 
 export class Bar{
@@ -20,8 +21,8 @@ export class Bar{
     if(i===0){
       return this.remove()
     }
-    bar.style.width = i + '%'
-    bar.classList.add('trans')
+    bar.classList.add('trans') //v4
+    bar.style.width = i + '%'    
   }
   //v2
   getValue=()=>{
