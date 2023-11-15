@@ -21,7 +21,7 @@ export class Bar{
     if(i===0){
       return this.remove()
     }
-    bar.classList.add('trans') //v4
+    bar.classList.add('trans') //v4 first before the set "width"
     bar.style.width = i + '%'    
   }
   //v2
