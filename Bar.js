@@ -3,6 +3,7 @@ v1 created
 v2 getValue
 v3 NaN issue first touch
 v4 repair the transtionend dont work 
+v5 style head.prepend(style)
 */
 
 export class Bar{
@@ -81,7 +82,8 @@ export class Bar{
   transition:width 0.3s ease-in;  
 }
     `;
-    document.body.append(el)
+    //document.body.append(el)
+    document.head.prepend(el)  //v5
   }
 }
 
